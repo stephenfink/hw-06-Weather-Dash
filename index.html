@@ -4,23 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Status</title>
+    <!--This is google fonts for font-family: 'Roboto', sans-serif;-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <!--this will have the layout of the following
     Search bar
 current weather information
 and the 5 day Forcast-->
+<header>
+    <!--this is where the nav bar with the search function will be at-->
+    <nav>
+        <div id="search">This is where search bar is</div>
+    </nav>
+
+</header>
 <div class="search">This is the div search</div>
+    <section id=currentW>
+        <!--This is where the current weather will be placed,
+        this will be larger due to current time-->
+    </section>
+</main>
 
 <!--we want to beable to storage the past search into local
 also to show past search on screen-->
-
+<section id="five-forcast" class="lower">
 <!--The five day forcast should show temp, weather type, at least-->
-<div class="forcastDay1"></div>
-<div class="forcastDay2"></div>
-<div class="forcastDay3"></div>
-<div class="forcastDay4"></div>
-<div class="forcastDay5"></div>
+<div class="row">
+    <div id="day1" class="col">day one</div>
+    <div id="day2" class="col">day two</div>
+    <div id="day3" class="col">day three</div>
+    <div id="day4" class="col">day four</div>
+    <div id="day5" class="col">day five</div>
+</div>
+</section>
+<!--jQuery link-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!--easy eye layout-->
+<script src ="script.js" type ="text/javascript"></script>
 </body>
 </html>
