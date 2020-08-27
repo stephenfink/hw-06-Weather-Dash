@@ -6,7 +6,8 @@
     <title>Weather Status</title>
     <!--This is google fonts for font-family: 'Roboto', sans-serif;-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
-    
+    <!--These are the style sheets to give the layout set up-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">  
     <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -16,9 +17,16 @@ current weather information
 and the 5 day Forcast-->
 <header>
     <!--this is where the nav bar with the search function will be at-->
-    <nav>
-        <div id="search">This is where search bar is</div>
-    </nav>
+    
+        <div class="navbar-fixed">
+            <nav class="nav-wrapper indigo">
+                <div class="container">
+                    <i class="fas fa-map-marked"></i><a href="#" class="brand-logo">Weather Dash</a> 
+                    <a href="#" data-target="sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a> 
+                </div>
+            </nav>
+        </div>
+   
 
 </header>
 <div class="search">This is the div search</div>
