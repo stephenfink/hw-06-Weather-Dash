@@ -21,19 +21,32 @@ and the 5 day Forcast-->
         <div class="navbar-fixed">
             <nav class="nav-wrapper indigo">
                 <div class="container">
-                    <i class="fas fa-map-marked"></i><a href="#" class="brand-logo">Weather Tracker</a> 
+                    <i class="fas fa-cloud"></i><a href="#" class="brand-logo">Weather Tracker</a> 
                     <a href="#" data-target="sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a> 
                 </div>
             </nav>
         </div>
    
-
 </header>
-<div class="search">This is the div search</div>
-    <section id=currentW>
+<aside id="sidebar" class="sidenav sidenav-fixed">
+    <form>
+        <div>
+            <div class="input-field">
+                <input placeholder="Location" id="place" type="text" class="validate center">
+                <div class="btn blue waves-effect waves-light right" id="submit">
+                    <i class="material-icons white-text center">Lets See</i>
+                </div>
+                <label for="location">Which City?</label>
+            </div>
+        </div>
+    </form>
+    <br>
+    <ul id="userHistory">
+    </ul>
+</aside>
         <!--This is where the current weather will be placed,
         this will be larger due to current time-->
-    </section>
+   
 </main>
 
 <!--we want to beable to storage the past search into local
