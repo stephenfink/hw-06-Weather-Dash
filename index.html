@@ -9,6 +9,7 @@
     <!--These are the style sheets to give the layout set up-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">  
     <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/127766fc06.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--this will have the layout of the following
@@ -31,12 +32,12 @@ and the 5 day Forcast-->
 <aside id="sidebar" class="sidenav sidenav-fixed">
     <form>
         <div>
-            <div class="input-field">
-                <input placeholder="Type Here" id="location" type="text" class="validate center">
+            <div class="input-field"><!--changed to place from location to shorten word-->
+                <input placeholder="Type Here" id="place" type="text" class="validate center">
                 <div class="btn blue waves-effect waves-light right" id="submit">
                     <i class="material-icons white-text center">Lets See</i>
                 </div>
-                <label for="location" class="pad">Which City?</label>
+                <label for="place" class="pad">Which City?</label>
             </div>
         </div>
     </form>
@@ -47,26 +48,54 @@ and the 5 day Forcast-->
         <!--This is where the current weather will be placed,
         this will be larger due to current time-->
    
-</main>
+
 
 <!--we want to beable to storage the past search into local
 also to show past search on screen-->
-<section id="five-forcast" class="lower">
-<!--The five day forcast should show temp, weather type, at least-->
-<div class="row">
-    <div id="day1" class="col">day one</div>
-    <div id="day2" class="col">day two</div>
-    <div id="day3" class="col">day three</div>
-    <div id="day4" class="col">day four</div>
-    <div id="day5" class="col">day five</div>
-</div>
+<main>
+    <section id="current-weather">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card blue lighten-2">
+                        <div class="card-content white-text">
+                        <span class="card-title">
+                            <h1 id="city">Use the search bar to look up a city</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="five-day">
+        <div class="container">
+            <div class="row"><h4>Forcast for the next Five days</h4></div>
+            <div class="row">
+                <div id="day1" class="col s12 m5 l2 offset-l1"></div>
+                <div id="day2" class="col s12 m5 l2"></div>
+                <div id="day3" class="col s12 m5 l2"></div>
+                <div id="day4" class="col s12 m5 offset-m2 l2"></div>
+                <div id="day5" class="col s12 m5 l2"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
 </section>
 
 <!--jQuery link-->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!--found some icons for the weather symbols-->
-<script src="https://kit.fontawesome.com/127766fc06.js" crossorigin="anonymous"></script>
-<!--easy eye layout-->
+<!--this is for ajax functions to work with HTML file-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script src ="script.js" type ="text/javascript"></script>
+<!--this starts the function of side bar with the css documentation-->
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('.modal').modal();
+        $('select').formSelect();
+    });
+    </script>
+
 </body>
 </html>
