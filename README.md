@@ -11,4 +11,4 @@ Thank you for your time,
  Author: Stephen Fink
 
  link of the app 
- [Click me]("https://stephenfink.github.io/hw-06-Weather-Dash/.)
+ [Click me](https://stephenfink.github.io/hw-06-Weather-Dash/.)
