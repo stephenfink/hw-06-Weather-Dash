@@ -1,13 +1,41 @@
 //The following will need to have coded
 //things for sure need to be in a var
-var place; //This is for current search
+var location; //This is for current search
 var history; //this is for past search
-
-
+    function historySave(){
+        history = JSON.parse(localStorage.getItem("userHistory"));
+        if (history === null){
+            history = [];
+            localStorage.setItem("userHistory", JSON.stringify(history));
+        } else{
+            for( var i = 0; i<history.length; i++){
+                $("#userHistory").append(`<li><a href="#!" class="histEl">${history[i]}</a></li>`);
+            }
+            location = history[0];
+        }
+    }
+historySave();
     //This should have the ability to use the location of the search 
         //storage it as a keyword of search to go back to the city
         //use local storage to keep past searches
         //using JSON 
+
+    //function for the submit button to save inputs
+    //to collect the user input for later use if need be
+    $("#submit").click(function(){
+        if(document.getElementById("location").value == ""){
+            alert("You must put in a city")
+            //this lets the user know they must input a city 
+        }else{
+            location = document.getElementById("location").value
+            $("#userHistory").prepend(`<li><a href="#!" class="histEl" value="${location}">${locaction}</a></li>`);
+            history.unshift(location)
+            localStorage.setItem("history", JSON.stringify(history));
+            
+
+        }
+    })
+
 
     //a way to get the information from the data base for weather
         //one for current day

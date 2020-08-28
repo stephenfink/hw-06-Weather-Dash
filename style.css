@@ -1,7 +1,9 @@
 header, main{
     padding-left: 300px;
   }
-
+.pad{
+    padding-left: 20px;
+}
 @media only screen and (max-width : 942px) {
     header, main, footer {
       padding-left: 0;
