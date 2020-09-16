@@ -12,3 +12,5 @@ Thank you for your time,
 
  link of the app 
  [Click me](https://stephenfink.github.io/hw-06-Weather-Dash/.)
+ 
+ License: MIT
